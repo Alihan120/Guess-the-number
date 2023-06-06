@@ -38,9 +38,8 @@ const counterr = () => {
   }
 };
 
-input.addEventListener("keydown", (e) => {
-  if (e.code === "Enter") {
-    button.click();
+input.addEventListener("keydown" , (e) => {
+  if(e.keyCode === 13){
+    button.click()
   }
-  input.value = "";
-});
+})
