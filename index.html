@@ -8,33 +8,17 @@
     <title>Document</title>
 </head>
 <body>
-    <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
-  <body>
-    <input id="input" type="number" value="" />
-    <button id="button" type="submit">check</button>
-    <h4>Write the number</h4>
-    <p id="write"></p>
-    <p id="hak"></p>
-    <p>
-      Şirketiniz yakın zamanda bir sayı bulma oyunu yaratmayı amaçlayan bir
-      projeye başladı. Böylece siz ve meslektaşlarınız proje üzerinde çalışmaya
-      başladınız. Uygulama her açıldığında arka planda 1-100 arasında rastgele
-      bir sayı tutacaktır. Kullanıcı bir tahminde bulunur. Sayı karşılaştırılır
-      ve kullanıcı doğru sayıyı tahmin edene kadar yukarı/aşağı yönlendirilir.
-      Örneğin: Numaranız 65 olsun ve kullanıcı ilk kez '20' tahmin etti.
-      Kullanıcıdan "20 ile 100 arasında bir sayı girin" komutunu isteyin.
-      Kullanıcı ikinci tahminde 80 tahmin ederse, bu sefer "20 (sayınıza en
-      yakın en düşük tahmin) ile 80 (sayınıza en yakın büyük tahmin) arasında
-      bir sayı girin" demelisiniz.
-    </p>
- 
+    <div class="container">
+      <h2>Guess The Number ( 1 - 100 )</h2>
+      <div class="formDiv">
+        <input id="input" type="number" value="" min="0" max="100" />
+        <button id="button" type="submit">check</button>
+      </div>
+      <img src="./image/pexels-black-ice-1314543.jpg" alt="">
+        <h4>Write the number</h4>
+        <p id="write"></p>
+        <p id="hak"></p>
+    </div>
   </body>
 </html>
     <script src="app.js"></script>

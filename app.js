@@ -1,6 +1,6 @@
 let tutulanSayi = Math.trunc(Math.random() * 100);
 console.log(tutulanSayi);
-
+let sayilar = [0,1,2,3,4,5,6,7,8,9]
 const input = document.querySelector("#input");
 const button = document.getElementById("button");
 const pWrite = document.querySelector("#write");
@@ -9,19 +9,20 @@ let counter = 5;
 let eski = "0";
 let yeni = "100"
 button.addEventListener("click", (e) => {
+  
   counterr();
- 
+
   if (input.value > 100 || input.value < 0) {
     alert("istenilen aralıkta bir sayı giriniz");
   } else if (input.value == tutulanSayi) {
-    alert("tebrikler kazandiniz");
+    pWrite.innerHTML = `YOU WIN`;
     input.disabled = true;
   } else if (input.value > tutulanSayi) {
       yeni = input.value
-    pWrite.innerHTML = `${eski} ile ${yeni} arasında bir sayı giriniz`;
+    pWrite.innerHTML = `Please enter numbers between ${eski} and ${yeni}`;
   } else if (input.value < tutulanSayi) {
       eski = input.value
-    pWrite.innerHTML = `${eski} ile ${yeni} arasında bir sayı giriniz`;
+    pWrite.innerHTML = `Please enter numbers between ${eski} and ${yeni}`;
   }
   input.value = "";
 });
@@ -29,10 +30,10 @@ button.addEventListener("click", (e) => {
 const counterr = () => {
   counter--;
   if (counter > 0) {
-    hakkim.innerHTML = `${counter} hakkiniz kaldı`;
+    hakkim.innerHTML = `You have ${counter} left`;
     input.focus();
   } else {
-    hakkim.innerHTML = `hakkiniz kalmadı`;
+    hakkim.innerHTML = `You have used all your rights`;
     input.disabled = true;
   }
 };
